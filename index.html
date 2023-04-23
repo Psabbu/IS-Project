@@ -47,14 +47,14 @@
         const stopwords = ["of", "the", "a", "an", "any", "is", "can", "who", "what", "why", "whom"];
         var editor = "sorts\n" +
             "    #bikes = {Yamaha VMAX, Yamaha Bolt And Bolt R Spec, Indian Motorcycle Thunder Stroke, Suzuki C50, Triumph Rocket 3 R, Suzuki GT 185, Yamaha SR500}.\n" +
-            "    #types = {cruisers, caferacers}.\n" +
+            "    #type = {cruisers, caferacers}.\n" +
             "predicates\n" +
-            "    types(#bikes,#types).\n" +
+            "    type(#bikes,#type).\n" +
             "rules\n" +
-            "    types(Yamaha VMAX, cruisers).\n" +
-            "    types(Indian Motorcycle Thunder Stroke, cruisers).\n" +
-            "    types(Yamaha SR500, caferacers).\n" +
-            "    types(Suzuki GT 185, caferacers).\n" ;
+            "    type(Yamaha VMAX, cruisers).\n" +
+            "    type(Indian Motorcycle Thunder Stroke, cruisers).\n" +
+            "    type(Yamaha SR500, caferacers).\n" +
+            "    type(Suzuki GT 185, caferacers)." ;
         // sorts
         var contstring = editor.split("sorts\n")[1].split("predicates\n");
         var sortstring = contstring[0].split('.');
