@@ -46,26 +46,15 @@
       var isClose=true;
         const stopwords = ["of", "the", "a", "an", "any", "is", "can", "who", "what", "why", "whom"];
         var editor = "sorts\n" +
-            "    #people = {tommy, alex, john, daniel, sarah, peter, lino}.\n" +
-            "    #gender = {male, female}.\n" +
+            "    #bikes = {Yamaha VMAX, Yamaha Bolt And Bolt R Spec, Indian Motorcycle Thunder Stroke, Suzuki C50, Triumph Rocket 3 R, Suzuki GT 185, Yamaha SR500}.\n" +
+            "    #types = {cruisers, caferacers}.\n" +
             "predicates\n" +
-            "    advisor(#people, #people).\n" +
-            "    friend(#people, #people).\n" +
-            "    gender(#people,#gender).\n" +
-            "    spanish(#people).\n" +
+            "    types(#bikes,#types).\n" +
             "rules\n" +
-            "    advisor(tommy, alex).\n" +
-            "    advisor(tommy, john).\n" +
-            "    advisor(tommy, daniel).\n" +
-            "    advisor(tommy, lino).\n" +
-            "    friend(lino, alex).\n" +
-            "    friend(lino, peter).\n" +
-            "    friend(sarah, alex).\n" +
-            "    friend(X, Y):-friend(Y,X).\n" +
-            "    gender(tommy,male).\n" +
-            "    gender(lino,male).\n" +
-            "    gender(sarah, female).\n" +
-            "    spanish(lino).";
+            "    types(Yamaha VMAX, cruisers).\n" +
+            "    types(Indian Motorcycle Thunder Stroke, cruisers).\n" +
+            "    types(Yamaha SR500, caferacers).\n" +
+            "    types(Suzuki GT 185, caferacers).\n" ;
         // sorts
         var contstring = editor.split("sorts\n")[1].split("predicates\n");
         var sortstring = contstring[0].split('.');
