@@ -80,7 +80,7 @@
       const stopwords = ["foods","food","recommend","where","of", "the", "a", "an", "any", "is", "can", "who", "what", "why", "whom"];
         var editor = "sorts\n" +
             "    #types = {dairyfree,glutenfree,nonveg,vegan,fruit,keto,paleo, paleo_diet}.\n" +
-            "    #food = {dark_chocolate,berry_sorbet,amaranth,black_beans,chickpeas,fresh_fruits,xanthan_gum,squash,oats,seeds,nuts,popcorn,rice_crackers,eggs,fresh_meat,millets,quinoa,broccoli,tuna,bison,lamb,celery_sticks,salmon,turkey_lettuce_wraps,greek_yogurt,scrambled_eggs,strawberry,chicken,mutton,chicken_wings,shrimp,meatballs,calamari,crab,fish,orange,apple,bananas,berries(strawberries, blueberries, raspberries, etc.),grapes,melons,kale}.\n"+
+            "    #food = {melons(watermelon, cantaloupe, honeydew, etc.),dark_chocolate,berry_sorbet,amaranth,black_beans,chickpeas,fresh_fruits,xanthan_gum,squash,oats,seeds,nuts,popcorn,rice_crackers,eggs,fresh_meat,millets,quinoa,broccoli,tuna,bison,lamb,celery_sticks,salmon,turkey_lettuce_wraps,greek_yogurt,scrambled_eggs,strawberry,chicken,mutton,chicken_wings,shrimp,meatballs,calamari,crab,fish,orange,apple,bananas,berries(strawberries, blueberries, raspberries, etc.),grapes,melons,kale}.\n"+
 
             "predicates\n" +
             "    food(#types,#food).\n" +
@@ -153,8 +153,8 @@
             "    food(vegan,melons).\n"+
             "    food(vegan,bananas).\n"+
             "    food(vegan,berries(strawberries, blueberries, raspberries, etc.)).\n"+    
-
-Melons (watermelon, cantaloupe, honeydew, etc.)            
+            "    food(vegan,melons(watermelon, cantaloupe, honeydew, etc.)).\n"+    
+            "    food(fruit,melons(watermelon, cantaloupe, honeydew, etc.)).\n"+                            
             "    food(vegan,kale).\n";
             
         // sorts
