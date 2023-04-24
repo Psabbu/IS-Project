@@ -46,15 +46,15 @@
       var isClose=true;
         const stopwords = ["of", "the", "a", "an", "any", "is", "can", "who", "what", "why", "whom"];
         var editor = "sorts\n" +
-            "    #bikes = {yamaha, alex, john, daniel, sarah, peter, lino}.\n" +
+            "    #bikes = {yamaha, suzuki, indian, triumph}.\n" +
             "    #type = {cruiser, caferacer}.\n" +
             "predicates\n" +
             "    type(#bikes, #type).\n" +
             "rules\n" +
             "    type(yamaha, cruiser).\n" +
-            "    type(alex, cruiser).\n" +
-            "    type(john, caferacer).\n" +
-            "    type(daniel, caferacer)." ;
+            "    type(suzuki, cruiser).\n" +
+            "    type(indian, caferacer).\n" +
+            "    type(triumph, caferacer)." ;
         // sorts
         var contstring = editor.split("sorts\n")[1].split("predicates\n");
         var sortstring = contstring[0].split('.');
