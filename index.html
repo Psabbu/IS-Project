@@ -48,7 +48,7 @@
         var editor = "sorts\n" +
             "    #bikes = {yamaha, suzuki, indian, triumph}.\n" +
             "    #type = {cruiser, caferacer}.\n" +
-            "    #budget = {50000, 40000, 35000, 60000}.\n" +
+            "    #budget = {50000L, 40000L, 35000L, 60000L}.\n" +
             "predicates\n" +
             "    type(#bikes, #type).\n" +
             "    budget(#bikes, #budget).\n" +
@@ -57,10 +57,10 @@
             "    type(suzuki, cruiser).\n" +
             "    type(indian, caferacer).\n" +
             "    type(triumph, caferacer).\n" +
-            "    budget(yamaha, 50000).\n" +
-            "    budget(suzuki, 40000).\n" +
-            "    budget(indian, 35000).\n" +
-            "    budget(triumph, 60000).\n";
+            "    budget(yamaha, 50000L).\n" +
+            "    budget(suzuki, 40000L).\n" +
+            "    budget(indian, 35000L).\n" +
+            "    budget(triumph, 60000L).\n";
         // sorts
         var contstring = editor.split("sorts\n")[1].split("predicates\n");
         var sortstring = contstring[0].split('.');
