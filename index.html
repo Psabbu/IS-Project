@@ -126,11 +126,16 @@
 
 <div class="container">
     <div id="text-input-container">
-        <input id="text-input" type="text" placeholder="Type your message here...">
+        <input id="text-input" type="text" placeholder="Type your message here..."><div>
+        <button id="voice-input-btn"  width="25px" height="25px"><img src="fa fa-microphone microphone-ico"</img>
+          </button></div>
     </div>
     <button id="submit-btn">Submit</button>
     <div id="answer"></div>
+     
 </div>
+
+
 
 
 
@@ -139,12 +144,13 @@
     
     <div class="container">
         <input type="text" id="text-input" placeholder="Type your question...">
-        <button id="voice-input-btn" width="25px" height="25px"><i class="fa fa-microphone microphone-ico" >  </i></button>
+       
         <br>
         <button id="submit-btn">Submit</button>
         <div id="answer-box"></div>
         <div id="answer"></div>
     </div>
+    
     <script>
       
       const stopwords = ["bikes","bike","recommend","where","of", "the", "a", "an", "any", "is", "can", "who", "what", "why", "whom"];
