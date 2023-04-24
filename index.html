@@ -48,13 +48,19 @@
         var editor = "sorts\n" +
             "    #bikes = {yamaha, suzuki, indian, triumph}.\n" +
             "    #type = {cruiser, caferacer}.\n" +
+            "    #engine = {400cc, 500c, 650cc, 1000cc}.\n" +
             "predicates\n" +
             "    type(#bikes, #type).\n" +
+            "    engine(#bikes, #engine).\n" +
             "rules\n" +
             "    type(yamaha, cruiser).\n" +
             "    type(suzuki, cruiser).\n" +
             "    type(indian, caferacer).\n" +
-            "    type(triumph, caferacer).\n"  ;
+            "    type(triumph, caferacer).\n" +
+            "    engine(yamaha, 400cc).\n" +
+            "    engine(suzuki, 500cc).\n" +
+            "    engine(indian, 1000cc).\n" +
+            "    engine(triumph, 650cc).\n";
         // sorts
         var contstring = editor.split("sorts\n")[1].split("predicates\n");
         var sortstring = contstring[0].split('.');
