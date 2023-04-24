@@ -60,8 +60,28 @@
             "    budget(yamaha, 50000L).\n" +
             "    budget(suzuki, 40000L).\n" +
             "    budget(indian, 35000L).\n" +
-            "    budget(triumph, 60000L).\n";
+            "    budget(triumph, 60000L).\n"        
+            "    printBudget(X) :- budget(X, Y), write(\"The budget of \"), write(X), write(\" is \"), write(Y), write(\".\n\").\n";
         // sorts
+      
+      // Define a function to handle input and output
+function handleInput(input) {
+  // Split the input string into words
+  const words = input.toLowerCase().split(" ");
+
+  // Remove any stopwords from the words array
+  const filteredWords = words.filter(word => !stopwords.includes(word));
+
+  // If the question is asking for the budget of a bike, call the printBudget predicate
+  if (filteredWords.includes("budget") && filteredWords.includes("of")) {
+    const bike = filteredWords[filteredWords.indexOf("of") + 1];
+    SPARC.runQuery(`printBudget(${bike})`);
+  }
+}
+
+// Call the handleInput function with some example inputs
+handleInput("What is the budget of yamaha?");
+      
         var contstring = editor.split("sorts\n")[1].split("predicates\n");
         var sortstring = contstring[0].split('.');
         sortstring.splice(-1, 1);
